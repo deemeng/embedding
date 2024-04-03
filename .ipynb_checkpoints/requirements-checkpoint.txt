@@ -1,0 +1,28 @@
+# trasformer
+fair-esm==2.0.0
+fsspec==2024.3.1
+huggingface-hub==0.22.2
+regex==2023.12.25
+safetensors==0.4.2
+sentencepiece==0.2.0
+tokenizers==0.15.2
+transformers==4.39.2
+
+# pytorch
+mpmath==1.3.0
+networkx==3.2.1
+pillow==10.2.0
+sympy==1.12
+torch==2.2.1
+torchaudio==2.2.1
+torchvision==0.17.1
+
+# others
+biopython==1.81
+importlib-metadata==6.8.0
+importlib-resources==6.1.1
+numpy==1.26.0
+pandas==2.1.3
+scikit-learn==1.3.2
+tqdm==4.66.1
+argparse==1.4.0

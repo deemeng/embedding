@@ -1,0 +1,1 @@
+DisprotIDLongSeq = ['DP00072', 'DP02924', 'DP02925']

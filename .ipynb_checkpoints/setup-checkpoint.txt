@@ -1,0 +1,20 @@
+PLM we use here is ProtTrans:
+A. Elnaggar et al., "ProtTrans: Toward Understanding the Language of Life Through Self-Supervised Learning," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 10, pp. 7112-7127, 1 Oct. 2022, doi: 10.1109/TPAMI.2021.3095381.
+
+https://github.com/agemagician/ProtTrans
+
+1. setup (install) ProtTrans
+    The following steps are from:
+    https://github.com/agemagician/ProtTrans/blob/master/Embedding/PyTorch/Advanced/ProtT5-XL-UniRef50.ipynb
+    
+1.1. Install Hugging face Transformer
+    https://huggingface.co/docs/transformers/installation
+    
+[run]
+    pip install transformers
+    
+[test if installed]
+    python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+   
+1.2. Go to Jupyter notebook
+    
