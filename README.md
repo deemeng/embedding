@@ -1,4 +1,4 @@
-
+<a name="readme-top"></a>
 # 🫠 Protein Sequence Embedding
 This project provide three type of protein sequence embedding, including 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer.
 In this introduction, we provide two methods to run the programe and embed your proteins sequences
@@ -102,8 +102,9 @@ In this introduction, we provide two methods to run the programe and embed your 
 * Check the embedded results from the output folder you provided
 
 # Contact
-Di Meng - di.meng@ucdconnect.ie
-Gianluca Pollastri - gianluca.pollastri@ucd.ie
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Di Meng - di.meng@ucdconnect.ie \
+Gianluca Pollastri - gianluca.pollastri@ucd.ie 
+
+Project Link: [https://github.com/deemeng/embedding.git](https://github.com/deemeng/embedding.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
