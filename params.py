@@ -20,6 +20,8 @@ path_input = os.path.join(path_data, 'input.fasta')
 path_output = os.path.join(path_data, 'output')
 path_hmm = os.path.join(path_data, 'hmm')
 '''*****************************USER-EDIT END***********************************'''
+create_folder(path_output)
+create_folder(path_hmm)
 
 path_output_features_onehot = os.path.join(path_output, 'onehot')
 path_output_features_protTrans = os.path.join(path_output, 'protTrans')
