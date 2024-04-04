@@ -1,9 +1,8 @@
 
-[Docker-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 # 🫠 Protein Sequence Embedding
 This project provide three type of protein sequence embedding, including 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer.
 In this introduction, we provide two methods to run the programe and embed your proteins sequences
-## 1. Docker
+## 1. Docker (recommended)
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/embedding/general">DockerHub</a>
 
   ```sh
@@ -75,4 +74,36 @@ In this introduction, we provide two methods to run the programe and embed your 
       Version:          0.19.0
       GitCommit:        de40ad0
   ```
+## 2. DOWNLOAD SOURCE CODE
+* Download source code from this Git page
+* Create env based on the `requirements.txt`
+* Edit file/foler paths
+  ```python
+  '''*****************************USER-EDIT START*********************************'''
+  '''Please edit this part if you prefer to change the path of input & output'''
+  path_input = os.path.join(path_data, 'input.fasta')
+  path_output = os.path.join(path_data, 'output')
+  path_hmm = os.path.join(path_data, 'hmm')
+  '''*****************************USER-EDIT END***********************************'''
+  ```
+  *Here is an example*
+  ```python
+  '''*****************************USER-EDIT START*********************************'''
+  '''Please edit this part if you prefer to change the path of input & output'''
+  path_input = '/Users/deemeng/Downloads/data/linker/linker.fasta'
+  path_output = '/Users/deemeng/Downloads/data/linker/output/embedding'
+  path_hmm = '/Users/deemeng/Downloads/data/linker/a3m'
+  '''*****************************USER-EDIT END***********************************'''
+  ```
+* Run the programe on Terminal
+  ```sh
+  python main.py --embeddingType onehot,protTrans,msaTrans
+  ```
+* Check the embedded results from the output folder you provided
 
+# Contact
+Di Meng - di.meng@ucdconnect.ie
+Gianluca Pollastri - gianluca.pollastri@ucd.ie
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
