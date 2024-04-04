@@ -101,10 +101,15 @@ In this introduction, we provide two methods to run the programe and embed your 
   ```
 * Check the embedded results from the output folder you provided
 
-# Contact
-Di Meng - di.meng@ucdconnect.ie \
-Gianluca Pollastri - gianluca.pollastri@ucd.ie 
+# 📩 Contact 
+📬 Di Meng - di.meng@ucdconnect.ie \
+📬 Gianluca Pollastri - gianluca.pollastri@ucd.ie 
 
 Project Link: [https://github.com/deemeng/embedding.git](https://github.com/deemeng/embedding.git)
 
+<!-- ACKNOWLEDGMENTS -->
+# ❤️ Acknowledgments ❤️ 📝
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [GitHub Pages](https://pages.github.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
