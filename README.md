@@ -6,7 +6,7 @@ In this introduction, we provide two methods to run the programe and embed your 
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/embedding/general">DockerHub</a>
 
   ```sh
-  docker pull dimeng851/embedding:v1
+  docker pull dimeng851/embedding:v2
   ```
 * Edit the embeeding methods in Docker file
   >Default: apply all three emedding methods: 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer. If you want to generate embedding from only one or two of the embedding methods\
