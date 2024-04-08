@@ -1,7 +1,21 @@
 <a name="readme-top"></a>
 # 🫠 Protein Sequence Embedding
-This project provide three type of protein sequence embedding, including 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer.
-In this introduction, we provide two methods to run the programe and embed your proteins sequences
+### Welcome to Protein Sequence Embedding 🧬
+
+This project offers three types of protein sequence embedding methods:
+
+1️⃣ **Onehot**: Encode your protein sequences into one-hot representations.
+
+2️⃣ **ProtTrans**: Utilize ProtTrans to embed your protein sequences.
+
+3️⃣ **MSA Transformer**: Employ MSA Transformer for embedding.
+
+---
+
+## Getting Started:
+
+In this introduction, we present two methods to run the program and embed your protein sequences.
+
 ## 1. Docker (recommend)
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/embedding/general">DockerHub</a>
 
