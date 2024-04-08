@@ -25,7 +25,7 @@ This project offers three types of protein sequence embedding methods:
   >[SEQUENCE_NAME/ID].a3m, replace *SEQUENCE_NAME/ID* with the actural sequence ID, it should be the same as the name from `.fasta` file.\
   >e.g. `DP02585.a3m` and `DP02606.a3m`
 ### Output 
-#### format 
+#### Format 
 `[SEQUENCE_NAME/ID].npy` files. 
 #### Shape
 * **Onehot**: (1, 227, 21)
