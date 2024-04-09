@@ -27,14 +27,20 @@ def msaTrans(path_input_dataset_json, path_output_features_msaTrans, path_hmm):
     # 2. predict & save embedded sequences
     df_dataset = pd.DataFrame(read_json2list(path_input_dataset_json))
     df_dataset['length'] = [len(seq) for seq in df_dataset['sequence']]
-    df_dataset = df_dataset[df_dataset['length']<=1022]
+    df_dataset['len_1022'] = [1 if l<=1022 else 0 for l in df_dataset['length']]
+
     # entyID_entityID
-    seq_IDS = list(set(df_dataset['id'].tolist()))
-    
+    seq_IDS = list(set(df_dataset.loc[df_dataset['len_1022']==1, 'id'].tolist()))
+        
     for name in seq_IDS:
         print(name)
-        # This is where the data is actually read in
+         # This is where the data is actually read in
         inputs = read_msa(os.path.join(path_hmm, f'{name}.a3m'))
+        
+        if len(inputs[0][1])>1022:
+            print(f'Sequence (MSA searching results) length ({len(inputs[0][1])}) is greater than 1022. ')
+            df_dataset.loc[df_dataset['id']==name, 'len_1022'] = 0
+            continue
         
         inputs = greedy_select(inputs, num_seqs=128) # can change this to pass more/fewer sequences
         msa_transformer_batch_labels, msa_transformer_batch_strs, msa_transformer_batch_tokens = msa_transformer_batch_converter([inputs])
