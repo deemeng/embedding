@@ -28,9 +28,9 @@ This project offers three types of protein sequence embedding methods:
 #### Format 
 `[SEQUENCE_NAME/ID].npy` files. 
 #### Shape
-* **Onehot**: (1, 227, 21)
-* **ProtTrans**: (1, 227, 1024)
-* **MSA Transformer**: (1, 227, 768)
+* **Onehot**: `(1, SEQUENCE_LENGTH, 21)`
+* **ProtTrans**: `(1, SEQUENCE_LENGTH, 1024)`
+* **MSA Transformer**: `(1, SEQUENCE_LENGTH, 768)`
 ---
 
 ## Getting Started:
