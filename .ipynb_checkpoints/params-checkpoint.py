@@ -14,15 +14,18 @@ ROOT = os.path.realpath('.')
 path_data = os.path.join(ROOT, 'data')
 path_input_dataset_json = os.path.join(path_data, 'dataset.json')
 
-'''*****************************USER-EDIT START*********************************'''
-'''Please edit this part if you prefer to change the path of input & output'''
-# path_input = os.path.join(path_data, 'input.fasta')
-# path_output = os.path.join(path_data, 'output')
-# path_hmm = os.path.join(path_data, 'hmm')
+'''*****************************USER-EDIT START*********************************
+Please edit this part if you prefer to change the path of input & output. 
 
+An example:
 path_input = '/home/dimeng/caid3/linker_long.fasta'
 path_output = '/home/dimeng/caid3/output'
 path_hmm = '/home/dimeng/project/linker_caid/a3m'
+'''
+path_input = os.path.join(path_data, 'input.fasta')
+path_output = os.path.join(path_data, 'output')
+path_hmm = os.path.join(path_data, 'hmm')
+
 '''*****************************USER-EDIT END***********************************'''
 create_folder(path_output)
 create_folder(path_hmm)
