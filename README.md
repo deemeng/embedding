@@ -64,11 +64,13 @@ In this introduction, we present two methods to run the program and embed your p
   dimeng851/embedding:v3
   ```
   >Please replace the following parts:\
-  >`CONTAINER_NAME` with any container name you like, 
-  >`PATH_TO_INPUT_FASTA_FILE` with input fasta file path,
-  >`PATH_TO_INPUT_A3M_FOLDER` with the folder to Hblits searching results, here we require `.a3m` files, and
-  >`PATH_TO_INPUT_OUTPUT_FOLDER` with the folder you want to put the embedding sequences. Do not change the other parts.
-  
+  >`CONTAINER_NAME` with any container name you like, \
+  >`PATH_TO_INPUT_FASTA_FILE` with input fasta file path,\
+  >`PATH_TO_INPUT_A3M_FOLDER` with the folder to Hblits searching results, here we require `.a3m` files, \
+  >`PATH_TO_INPUT_OUTPUT_FOLDER` with the folder you want to put the embedding sequences. Do not change the other parts,\
+  >`PATH_TO_INPUT_TORCH_CHECKPOINT` with the parent folder to two MSA Transformer models (*esm_msa1b_t12_100M_UR50S-contact-regression.pt* & *esm_msa1b_t12_100M_UR50S.pt*) if you have the models downloaded. Otherwise, a folder to save the pretranined models. \
+  >`PATH_TO_INPUT_HUGGINGFACE_HUB` with the parent folder to ProtTrans (*models--Rostlab--prot_t5_xl_uniref50*) if you have the models downloaded. Otherwise, a folder to save the pretranined model. 
+
   *Here is an example,*
   ```sh
   docker run -d \
