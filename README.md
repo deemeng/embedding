@@ -1,12 +1,47 @@
 <a name="readme-top"></a>
 # 🫠 Protein Sequence Embedding
-This project provide three type of protein sequence embedding, including 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer.
-In this introduction, we provide two methods to run the programe and embed your proteins sequences
-## 1. Docker (recommended)
+### Welcome to Protein Sequence Embedding 🧬
+
+This project offers three types of protein sequence embedding methods:
+
+1️⃣ **Onehot**: Encode your protein sequences into one-hot representations.
+
+2️⃣ **ProtTrans**: Utilize ProtTrans to embed your protein sequences.
+
+3️⃣ **MSA Transformer**: Employ MSA Transformer for embedding.
+
+### Inputs
+* One `.fasta` file, put the queir sequences into one FASTA file.
+  e.g.
+  ```sh
+  >DP02585
+  MWERLNCAAEDFYSRLLQKFNEEKKGIRKDPFLYEADVQVQLISKGQPNPLKNILNENDIVFIVEKVPLEKEETSHIEELQSEETAISDFSTGENVGPLALPVGKARQLIGLYTMAHNPNMTHLKINLPVTALPPLWVRCDSSDPEGTCWLGAELITTNNSITGIVLYVVSCKADKNYSVNLENLKNLHKKRHHLSTVTSKGFAQYELFKSSALDDTITASQTAIALDISWSPVDEILQIPPLSSTATLNIKVESGEPRGPLNHLYRELKFLLVLADGLRTGVTEWLEPLEAKSAVELVQEFLNDLNKLDGFGDSTKKDTEVETLKHDTAAVDRSVKRLFKVRSDLDFAEQLWCKMSSSVISYQDLVKCFTLIIQSLQRGDIQPWLHSGSNSLLSKLIHQSYHGTMDTVSLSGTIPVQMLLEIGLDKLKKDYISFFIGQELASLNHLEYFIAPSVDIQEQVYRVQKLHHILEILVSCMPFIKSQHELLFSLTQICIKYYKQNPLDEQHIFQLPVRPTAVKNLYQSEKPQKWRVEIYSGQKKIKTVWQLSDSSPIDHLNFHKPDFSELTLNGSLEERIFFTNMVTCSQVHFK
+  >DP02606
+  MSRQSSVSFRSGGSRSFSTASAITPSVSRTSFTSVSRSGGGGGGGFGRVSLAGACGVGGYGSRSLYNLGGSKRISISTSGGSFRNRFGAGAGGGYGFGGGAGSGFGFGGGAGGGFGLGGGAGFGGGFGGPGFPVCPPGGIQEVTVNQSLLTPLNLQIDPSIQRVRTEEREQIKTLNNKFASFIDKVRFLEQQNKVLDTKWTLLQEQGTKTVRQNLEPLFEQYINNLRRQLDSIVGERGRLDSELRNMQDLVEDFKNKYEDEINKRTTAENEFVMLKKDVDAAYMNKVELEAKVDALMDEINFMKMFFDAELSQMQTHVSDTSVVLSMDNNRNLDLDSIIAEVKAQYEEIANRSRTEAESWYQTKYEELQQTAGRHGDDLRNTKHEISEMNRMIQRLRAEIDNVKKQCANLQNAIADAEQRGELALKDARNKLAELEEALQKAKQDMARLLREYQELMNTKLALDVEIATYRKLLEGEECRLSGEGVGPVNISVVTSSVSSGYGSGSGYGGGLGGGLGGGLGGGLAGGSSGSYYSSSSGGVGLGGGLSVGGSGFSASSGRGLGVGFGSGGGSSSSVKFVSTTSSSRKSFKS
+  ...
+  ```
+* `.a3m` files (for MSA transformer only)
+  >Generate from [HHblits](https://github.com/soedinglab/hh-suite) \
+  >[SEQUENCE_NAME/ID].a3m, replace *SEQUENCE_NAME/ID* with the actural sequence ID, it should be the same as the name from `.fasta` file.\
+  >e.g. `DP02585.a3m` and `DP02606.a3m`
+### Output 
+#### Format 
+`[SEQUENCE_NAME/ID].npy` files. 
+#### Shape
+* **Onehot**: `(1, SEQUENCE_LENGTH, 21)`
+* **ProtTrans**: `(1, SEQUENCE_LENGTH, 1024)`
+* **MSA Transformer**: `(1, SEQUENCE_LENGTH, 768)`
+---
+
+## Getting Started:
+
+In this introduction, we present two methods to run the program and embed your protein sequences.
+
+## 1. Docker (recommend)
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/embedding/general">DockerHub</a>
 
   ```sh
-  docker pull dimeng851/embedding:v1
+  docker pull dimeng851/embedding:v2
   ```
 * Edit the embeeding methods in Docker file
   >Default: apply all three emedding methods: 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer. If you want to generate embedding from only one or two of the embedding methods\
