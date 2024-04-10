@@ -41,7 +41,7 @@ In this introduction, we present two methods to run the program and embed your p
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/embedding/general">DockerHub</a>
 
   ```sh
-  docker pull dimeng851/embedding:v2
+  docker pull dimeng851/embedding:v3
   ```
 * Edit the embeeding methods in Docker file
   >Default: apply all three emedding methods: 1️⃣ onehot, 2️⃣ protTrans , and 3️⃣ MSA Transformer. If you want to generate embedding from only one or two of the embedding methods\
@@ -76,9 +76,9 @@ In this introduction, we present two methods to run the program and embed your p
   docker run -d \
   -it \
   --name embed_con \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/embedding/data/input.fasta \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/a3m,target=/embedding/data/hmm \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output/embedding,target=/embedding/data/output \
+  --mount type=bind,source=/home/dimeng/caid3/test.fasta,target=/embedding/data/input.fasta \
+  --mount type=bind,source=/home/dimeng/project/linker_caid/a3m,target=/embedding/data/hmm \
+  --mount type=bind,source=/home/dimeng/caid3/output/embedding,target=/embedding/data/output \
   --mount type=bind,source=/home/dimeng/.cache/torch/hub/checkpoints/,target=/root/.cache/torch/hub/checkpoints/ \
   --mount type=bind,source=/home/dimeng/.cache/huggingface/hub/,target=/root/.cache/huggingface/hub/ \
   dimeng851/embedding:v3
