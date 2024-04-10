@@ -59,7 +59,9 @@ In this introduction, we present two methods to run the program and embed your p
   --mount type=bind,source=PATH_TO_INPUT_FASTA_FILE,target=/embedding/data/input.fasta \
   --mount type=bind,source=PATH_TO_INPUT_A3M_FOLDER,target=/embedding/data/hmm \
   --mount type=bind,source=PATH_TO_INPUT_OUTPUT_FOLDER,target=/embedding/data/output \
-  dimeng851/embedding:v1
+  --mount type=bind,source=PATH_TO_INPUT_TORCH_CHECKPOINT,target=/root/.cache/torch/hub/checkpoints/ \
+  --mount type=bind,source=PATH_TO_INPUT_HUGGINGFACE_HUB,target=/root/.cache/huggingface/hub/ \
+  dimeng851/embedding:v3
   ```
   >Please replace the following parts:\
   >`CONTAINER_NAME` with any container name you like, 
@@ -75,7 +77,9 @@ In this introduction, we present two methods to run the program and embed your p
   --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/embedding/data/input.fasta \
   --mount type=bind,source=/Users/deemeng/Downloads/data/linker/a3m,target=/embedding/data/hmm \
   --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output/embedding,target=/embedding/data/output \
-  dimeng851/embedding:v1
+  --mount type=bind,source=/home/dimeng/.cache/torch/hub/checkpoints/,target=/root/.cache/torch/hub/checkpoints/ \
+  --mount type=bind,source=/home/dimeng/.cache/huggingface/hub/,target=/root/.cache/huggingface/hub/ \
+  dimeng851/embedding:v3
   ```
 * Check the embedded results from the output folder you provided
 * Here are some information about the Docker version this project used
