@@ -36,6 +36,9 @@ if __name__ == "__main__":
     dump_list2json(list_entity, params.path_input_dataset_json)
     print(f'input JSON file is created under: {params.path_input_dataset_json}')
 
+    '''
+    2. Embedding
+    '''
     for embeddingType in list_embeddingType:
         comment = f'Running Embedding: {embeddingType}\nstarted at {str(datetime.datetime.now())}'
         print(comment)
@@ -51,8 +54,7 @@ if __name__ == "__main__":
             from method.msaTrans import msaTrans
             path_output_features = params.path_output_features_msaTrans
             msaTrans(params.path_input_dataset_json, path_output_features, params.path_hmm)
-        
-    
+            
     if os.path.exists(params.path_input_dataset_json):
         os.remove(params.path_input_dataset_json)
         print(f'input JSON file is deleted: {params.path_input_dataset_json}')

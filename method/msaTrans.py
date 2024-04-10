@@ -29,6 +29,11 @@ def msaTrans(path_input_dataset_json, path_output_features_msaTrans, path_hmm):
     df_dataset['length'] = [len(seq) for seq in df_dataset['sequence']]
     df_dataset['len_1022'] = [1 if l<=1022 else 0 for l in df_dataset['length']]
 
+    long_seq_IDS = list(set(df_dataset.loc[df_dataset['len_1022']==0, 'id'].tolist()))
+    
+    if len(long_seq_IDS)>0:
+        print(f"Note: MSA Transformer cannot embed sequences with length >= 1022!!!\nTherefore, we cannot embed: {long_seq_IDS}")
+        
     # entyID_entityID
     seq_IDS = list(set(df_dataset.loc[df_dataset['len_1022']==1, 'id'].tolist()))
         
